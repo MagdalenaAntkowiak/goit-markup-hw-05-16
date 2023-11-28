@@ -54,12 +54,18 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-ul {
   color: var(--navy-blue);
   padding: 24px 0;
   display: inline-block;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-title {
@@ -88,6 +94,9 @@
   min-width: 169px;
   height: 56px;
   margin: 0 auto;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button:hover {
@@ -191,6 +200,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-icons:hover {
@@ -264,6 +276,9 @@
   padding: 12px 24px;
   border-radius: 4px;
   border: 1px solid var(--cornflower);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-buttons:hover {
@@ -411,6 +426,9 @@ img {
   align-items: center;
   justify-content: center;
   color: var(--light-slate);
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-five:hover {
@@ -483,19 +501,26 @@ img {
   padding: 32px 0;
 }
 
-.portfolio-link {
+.item > img {
+  width: 100%;
+  height: auto;
   text-decoration: none;
   display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover {
+.item:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 
-.portfolio-link:focus {
+.item:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 
 .icons-footer {
@@ -520,6 +545,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
@@ -533,4 +561,111 @@ img {
 
 .headline-icons {
   margin-left: 120px;
+}
+
+.studio-underline::after {
+  content: "";
+  background-color: var(--ocean);
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  display: block;
+  position: relative;
+  top: 25px;
+}
+
+.portfolio-underline::after {
+  content: "";
+  background-color: var(--ocean);
+  border-radius: 2px;
+  width: 66px;
+  height: 4px;
+  display: block;
+  position: relative;
+  top: 25px;
+}
+
+.portfolio-animation {
+  position: relative;
+  overflow: hidden;
+}
+.animation-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  color: var(--cloud);
+  background-color: var(--iris);
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+}
+
+.item:hover .animation-text,
+.item:focus .animation-text {
+  animation-name: translateCard;
+  animation-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes translateCard {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.item:hover .animation-text,
+.item:focus .animation-text {
+  animation-name: translateCard;
+  animation-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--navy-blue-modal);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 408px;
+  min-height: 584px;
+  background-color: var(--dairy);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
 }
