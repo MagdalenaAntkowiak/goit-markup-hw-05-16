@@ -664,8 +664,21 @@ img {
 
 .close-btn {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  color: var(--navy-blue);
+  background-color: var(--cornflower);
+  border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: rgba(0, 0, 0, 0.1);
+  border: 4px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: rgba(255, 255, 255, 1);
+  background-color: var(--ocean);
 }
