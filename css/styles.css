@@ -110,6 +110,8 @@
 }
 
 .background-title {
+  margin: 0 auto;
+
   background-color: var(--navy-blue);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -363,10 +365,6 @@ address {
   display: flex;
 
   gap: 40px;
-}
-
-.background-title {
-  text-align: center;
 }
 
 .third-headline-list {
