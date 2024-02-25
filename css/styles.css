@@ -703,10 +703,9 @@ label {
 
 .subscribe-footer {
   display: flex;
-  max-width: 264px;
 }
 
-.form-label-footer {
+.text-subscribe {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -716,13 +715,23 @@ label {
   margin-left: 80px;
 }
 
+.form-footer {
+  display: flex;
+  gap: 24px;
+}
+
 .input-footer {
   color: var(--white);
   font-size: 12px;
-  padding: 8px 100px 8px 16px;
-  background-color: var(--navy-blue);
+  padding-left: 16px;
+  background-color: transparent;
   border: 1px solid white;
   border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15;
 }
 
 .subscribe-button {
