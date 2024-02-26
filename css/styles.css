@@ -689,7 +689,12 @@ img {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:hover,
+.close-btn:hover {
+  fill: #ffffff;
+  background-color: #404bbf;
+  border: none;
+}
+
 .close-btn:focus {
   fill: #ffffff;
   background-color: #404bbf;
@@ -740,7 +745,7 @@ input::placeholder {
 .button-footer {
   display: flex;
   justify-content: center;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   min-width: 165px;
   height: 40px;
   font-size: 16px;
@@ -752,11 +757,10 @@ input::placeholder {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  align-items: center;
 }
 
 .form-svg-footer {
-  width: 24px;
-  height: 24px;
   display: block;
   margin-left: 16px;
 }
@@ -799,7 +803,10 @@ input::placeholder {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-user-name:hover,
+.input-user-name:hover {
+  border-color: var(--iris);
+}
+
 .input-user-name:focus {
   border-color: var(--iris);
 }
