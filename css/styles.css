@@ -702,7 +702,7 @@ label {
 }
 
 .subscribe-footer {
-  display: flex;
+  margin-left: 80px;
 }
 
 .text-subscribe {
@@ -730,17 +730,17 @@ label {
   height: 40px;
   line-height: 2;
   letter-spacing: 0.04em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-input::placeholder{
-  color:vat(--white);
+input::placeholder {
+  color: var(--white);
 }
 
 .button-footer {
   display: flex;
   justify-content: center;
-  font-family:sans-serif;
+  font-family: sans-serif;
   min-width: 165px;
   height: 40px;
   font-size: 16px;
@@ -767,4 +767,39 @@ input::placeholder{
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  color: (var(--navy-blue));
+  margin-bottom: 16px;
+}
+
+.form-modal {
+  margin-bottom: 8px;
+}
+
+.label-modal {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--light-slate);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.user-name {
+  position: relative;
+}
+
+.input-user-name {
+  width: 100%;
+  height: 40px;
+  border: 1px solid gba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-user-name:hover,
+.input-user-name:focus {
+  border-color: var(--iris);
 }
