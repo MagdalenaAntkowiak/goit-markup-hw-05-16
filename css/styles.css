@@ -876,7 +876,7 @@ input::placeholder {
   display: inline-flex;
 }
 
-.span-checkbox:checked {
+.input-privacy:checked + .label-checkbox span {
   background-color: var(--ocean);
   border: none;
   fill: var(--cloud);
